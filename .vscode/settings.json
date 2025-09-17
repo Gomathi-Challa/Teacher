@@ -1,0 +1,89 @@
+// {
+//   "editor.formatOnSave": true,
+//   "[javascript]": {
+//     "editor.defaultFormatter": "biomejs.biome"
+//   },
+//   "[typescript]": {
+//     "editor.defaultFormatter": "biomejs.biome"
+//   },
+//   "[typescriptreact]": {
+//     "editor.defaultFormatter": "biomejs.biome"
+//   },
+//   "typescript.tsdk": "node_modules/typescript/lib",
+//   "eslint.workingDirectories": [
+//     { "pattern": "app/*" },
+//     { "pattern": "packages/*" }
+//   ],
+//   "css.lint.unknownAtRules": "ignore",
+//   "tailwindCSS.includeLanguages": {
+//     "plaintext": "css",
+//     "typescript": "javascript",
+//     "typescriptreact": "javascript"
+//   },
+//   "editor.quickSuggestions": {
+//     "strings": true
+//   },
+//   "[css]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "css.validate": false,
+//   "less.validate": false,
+//   "scss.validate": false,
+//   "tailwindCSS.experimental.classRegex": [
+//     "class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+//     "className:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+//     "[\"'`]([^\"'`]*)[\"'`]"
+//   ]
+// }
+
+{
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.workingDirectories": [
+    { "pattern": "app/*" },
+    { "pattern": "packages/*" }
+  ],
+
+  // ← Disable built‑in CSS validators
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // ← Ignore unknown @rules
+  "css.lint.unknownAtRules": "ignore",
+
+  // ← Treat .css files as PostCSS so Tailwind IntelliSense recognizes @tailwind
+  "files.associations": {
+    "*.css": "postcss"
+  },
+
+  // ← Ensure Tailwind IntelliSense runs in PostCSS files
+  "tailwindCSS.includeLanguages": {
+    "postcss": "css",
+    "plaintext": "css",
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+
+  "tailwindCSS.experimental.classRegex": [
+    "class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+    "className:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+    "[\"'`]([^\"'`]*)[\"'`]"
+  ],
+
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
